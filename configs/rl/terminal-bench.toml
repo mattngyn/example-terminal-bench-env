@@ -1,0 +1,16 @@
+model = "Qwen/Qwen3-4B-Instruct-2507"
+max_steps = 500
+batch_size = 64
+rollouts_per_example = 8
+
+[sampling]
+max_tokens = 4096
+temperature = 0.7
+
+[[env]]
+id = "example-terminal-bench-env"
+args = { max_turns = 50 }
+
+[wandb]
+project = "terminal-bench"
+name = "qwen3-4b-terminal-bench-grpo"

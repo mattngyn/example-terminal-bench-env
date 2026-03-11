@@ -1,0 +1,20 @@
+descriptions:
+  - key: base
+    description: |
+      Configure nginx to serve a static HTML page on port 8080.
+
+      Requirements:
+      1. Create the file /var/www/html/index.html containing the text "Hello Terminal-Bench"
+      2. Configure nginx to listen on port 8080 and serve /var/www/html as the root
+      3. Start (or restart) nginx so it is actively serving on port 8080
+
+      The container already has nginx and curl installed.
+
+docker_image: "ubuntu:24.04"
+difficulty: easy
+tags:
+  - networking
+  - nginx
+  - configuration
+max_agent_timeout_sec: 180
+max_test_timeout_sec: 60
